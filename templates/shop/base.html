@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %} Электротехника {% endblock %}</title>
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="{% static "admin/favicon.ico" %}">
+</head>
+<body>
+<div id="top-top">
+    <h1>
+    <a href="/" >Электротехника</a>
+    </h1>
+    <div class="cart">
+         {% with total_items=cart|length %}
+        {% if cart|length > 0 %}
+            Ваша корзина:
+            <a href="{% url "cart:cart_detail" %}">
+                {% if total_items > 0 %}
+                    {{ total_items }} Тов.  -
+                    {{ cart.get_total_price }} Руб.
+                {% endif %}
+            </a>
+             {% for item in cart %}
+                {% with product=item.product %}
+                    <br>
+                {% endwith %}
+            {% endfor %}
+        {% else %}
+            Ваша корзина пуста
+        {% endif %}
+    {% endwith %}
+    </div>
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

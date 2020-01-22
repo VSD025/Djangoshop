@@ -1,0 +1,211 @@
+body{
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  background-color: whitesmoke;
+
+}
+.top{
+  padding: 20px 0;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.top-bl{
+  background: #bebebe;
+  padding: 15px;
+}
+.top-bl .cart{
+  float: right;
+}
+#sidebar ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+#sidebar ul li{
+  padding: 5px 10px;
+}
+#sidebar ul li.selected{
+  background: #0095ff;
+  color: white;
+  border-radius: 3px;
+}
+#sidebar ul li.selected a{
+  color: white;
+}
+.items{
+  margin-top: 20px;
+}
+.item{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.item a img{
+  margin-bottom: 15px;
+}
+
+.price{
+  font-weight: 600;
+  font-size: 20px;
+}
+
+form.add{
+  margin-bottom: 10px;
+}
+form.add label{
+  margin-right: 10px;
+}
+#id_quantity{
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+form.add input[type="submit"]{
+  background: #2a6496;
+  border-radius: 3px;
+  border: 0;
+  padding: 5px 10px;
+  color: white;
+}
+.table-cart{
+  width: 100%;
+  margin: 10px 0;
+}
+.cart-img{
+  width: 10%;
+}
+th, td{
+  padding: 5px;
+}
+thead{
+  background: #2a6496;
+  color: white;
+}
+.btn{
+  background: #2a6496;
+  color: white;
+}
+.btn-light{
+  background: #808080;
+}
+.order-info h2{
+  margin-bottom: 20px;
+}
+.order-form{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.order-form label{
+  display: block;
+}
+.order-form input{
+  width: 100%;
+  padding: 5px 10px;
+}
+
+.base-top {
+  text-align: center;
+}
+
+#top-top {
+
+}
+
+#top-top h1{
+  text-align: center;
+  font-family: "JetBrains Mono";
+}
+
+
+.cart {
+  text-align: right;
+  background-color: #0095ff;;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#list-title h3 {
+  text-align: center;
+}
+
+#sidebar {
+  text-align: center;
+}
+
+#main h1 {
+  text-align: center;
+}
+
+.product-detail {
+  text-align: center;
+}
+
+.product-text {
+  text-align: left;
+}
+
+.cart-top{
+  text-align: center;
+}
+
+.cart-table {
+  text-align: left;
+  width: 100%;
+}
+
+.total {
+  text-align: left;
+}
+
+.num {
+  text-align: left;
+}
+
+
+.cart {
+  width: 100%;
+}
+
+.cart-name {
+  text-align: left;
+}
+
+.oreder-top {
+  text-align: center;
+}
+
+.order-title {
+  text-align: center;
+}
+
+.order-info {
+  text-align: center;
+}
+
+.order-form {
+  width: 250px;
+  align-items: center;
+}
+
+.order-form p {
+  align-items: center;
+}
+
+.order-button {
+  width: 50px;
+}
+
+.payment-title {
+  text-align: center;
+}
+
+.payment-content {
+  text-align: center;
+}
+
+.title-good-payment {
+  text-align: center;
+}
+
+.image-center {
+  text-align: center;
+}

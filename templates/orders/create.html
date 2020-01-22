@@ -1,0 +1,43 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Заказ{% endblock %}
+
+{% block content %}
+    <h1 class="oreder-top">Оформление заказа</h1>
+    <div class="order-info">
+        <ul>
+        {% with total_items=cart|length %}
+               {% if cart|length > 0 %}
+                   <div id="order-info">
+                    {% for item in cart %}
+                           {{ item.quantity }} шт. {{ item.product.name }} :
+                           <span>{{ item.total_price }} Рублей</span>
+                            <br>
+                     {% endfor %}
+                   <p>Всего: {{ cart.get_total_price }} Рублей</p>
+                   </div>
+               {% else %}
+                   <h3>Пожалуйста, добавьте товары в корзину!</h3>
+                   <a href="{% url "shop:product_list" %}" class="button light">Продолжить покупки</a>
+               {% endif %}
+               </ul>
+           </div>
+           <div>
+                   {% if cart|length > 0 %}
+                       <form action="." method="post" class="order-form">
+                           <p> Имя {{ form.first_name }}</p>
+                           <p> Фамилия {{ form.last_name }}</p>
+                           <p> Отчество {{ form.second_name }}</p>
+                           <p> Email {{ form.email}}</p>
+                           <p> Город {{ form.city }}</p>
+                           <p> Адрес {{ form.address }}</p>
+                           <p> Индекс {{ form.postal_code }}</p>
+                           <p><input type="submit" value="Заказать" class="order-button"></p>
+                           {% csrf_token %}
+                       </form>
+
+                   <a href="{% url "shop:product_list" %}" class="button light">Продолжить покупки</a>
+                   {% endif %}
+            </div>
+   {% endwith %}
+{% endblock %}

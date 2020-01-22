@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %} Электротехника {% endblock %}</title>
+    <link href="{% static "css/style.css" %}" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="{% static "admin/favicon.ico" %}">
+</head>
+<body>
+<div id="top-top">
+    <h1>
+    <a href="/" >Электротехника</a>
+    </h1>
+    <div class="cart">
+         <p>Режим оформления заказа</p>
+    </div>
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
